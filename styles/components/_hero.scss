@@ -1,0 +1,128 @@
+.hero {
+    background: linear-gradient(transparent 80%, var(--color-bgr) 98%), url("./../../assets/image/hero_bgr.png") no-repeat top center;
+    position: relative;
+
+    &__container {
+        padding-top: 190px;
+        padding-bottom: 230px;
+    }
+
+    &__text {
+        position: relative;
+
+        .title {
+            padding-bottom: 30px;
+
+            &__offset {
+                display: inline-block;
+                width: 300px;
+            }
+        }
+
+        .descr {
+            display: inline-block;
+            width: max-content;
+            max-height: max-content;
+            max-width: 360px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateY(calc(100% - 5px));
+        }
+
+        .btn {
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+            transform: translate(-10px, calc(-100% - 20px));
+        }
+
+        .last-word {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        &__container {
+            padding: 25px;
+            padding-top: 190px;
+            padding-bottom: 230px;
+        }
+
+        &__text {
+            .title {
+                font-size: 130px;
+            }
+
+        }
+    }
+
+    @media (max-width: 1100px) {
+        &__text {
+            .title {
+                font-size: 110px;
+
+                &__offset {
+                    width: 200px;
+                }
+            }
+
+            .descr {
+                transform: translateY(100%);
+                top: auto;
+                bottom: -20px;
+            }
+
+            .btn {
+                transform: translateY(100%);
+                top: auto;
+                bottom: -20px;
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        &__text {
+            text-align: center;
+
+            .title {
+                font-size: 110px;
+
+                &__offset {
+                    display: none;
+                }
+            }
+        }
+
+        .descr {
+            display: none;
+            ;
+        }
+
+        .btn {
+            transform: translate(-50%, 100%);
+
+            left: 50%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        &__text {
+            .title {
+                font-size: 50px;
+            }
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: var(--small-offset);
+        }
+
+        .last-word {
+            right: 50%;
+            transform: translateX(100%);
+        }
+    }
+}

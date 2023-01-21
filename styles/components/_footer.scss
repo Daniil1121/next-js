@@ -1,0 +1,69 @@
+.footer {
+    background: linear-gradient(#181c38 0 0) padding-box, linear-gradient(180deg, rgb(21, 191, 253) 5%, rgb(156, 55, 253) 100%) border-box;
+    box-sizing: border-box;
+    border-top: 1px solid transparent;
+    padding: 35px 0;
+    position: relative;
+    z-index: 100;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__company {
+        &__logo {
+            margin-bottom: var(--main-offset);
+        }
+    }
+
+    &__menu {
+        &__list {
+            display: grid;
+            grid-gap: var(--small-offset);
+            grid-template-columns: 1fr 1fr;
+
+        }
+    }
+
+    &__socials {
+        &__list {
+            display: flex;
+        }
+
+        &__item:not(:last-child) {
+            margin-right: var(--main-offset);
+        }
+    }
+
+    &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 140%;
+        margin-bottom: var(--main-offset);
+    }
+
+    @media (max-width: 800px) {
+        padding: 5px 0;
+
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        &__title {
+            margin-top: var(--small-offset);
+            margin-bottom: 5px;
+        }
+
+        &__company {
+            margin-top: var(--small-offset);
+            grid-row: 3/4;
+        }
+
+        &__menu__list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
