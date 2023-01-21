@@ -53,33 +53,35 @@ const Header = ({
           <LogoSVG />
         </div>
         <div className="header__menu">
-          <ul className="menu-list list-reset">
-            <li>
-              <a onClick={scrollToAbout} href="#">
-                About
-              </a>
-            </li>
-            <li>
-              <a onClick={scrollToTechnologies} href="#">
-                Programs
-              </a>
-            </li>
-            <li>
-              <a onClick={scrollToSteps} href="#">
-                Steps
-              </a>
-            </li>
-            <li>
-              <a onClick={scrollToFAQ} href="#">
-                Questions
-              </a>
-            </li>
-            <li>
-              <a onClick={scrollToContacts} href="#">
-                Get in touch
-              </a>
-            </li>
-          </ul>
+          <nav>
+            <ul className="menu-list list-reset">
+              <li>
+                <a onClick={scrollToAbout} href="#">
+                  About
+                </a>
+              </li>
+              <li>
+                <a onClick={scrollToTechnologies} href="#">
+                  Programs
+                </a>
+              </li>
+              <li>
+                <a onClick={scrollToSteps} href="#">
+                  Steps
+                </a>
+              </li>
+              <li>
+                <a onClick={scrollToFAQ} href="#">
+                  Questions
+                </a>
+              </li>
+              <li>
+                <a onClick={scrollToContacts} href="#">
+                  Get in touch
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
