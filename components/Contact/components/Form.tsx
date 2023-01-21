@@ -24,7 +24,7 @@ const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
     reset,
   } = useForm<IFormValues>({ mode: "onChange", resolver: yupResolver(scema) });
   const [error, setError] = useState<string>("");
@@ -71,7 +71,9 @@ const Form = () => {
         )}
       </div>
       <div className="contact__field">
-        <button className="btn btn-reset contact__btn">Send</button>
+        <button disabled={!isValid} className="btn btn-reset contact__btn">
+          Send
+        </button>
         {error && <p className="contact__field__error">{error}</p>}
       </div>
     </form>
